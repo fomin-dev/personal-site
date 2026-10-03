@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "title": "Fomin — websites, bots and scripts, built to spec",
+    "description": "Websites, Telegram bots and Python scripts. Fixed price, 50% upfront, first 5 orders are free."
+  },
+  "nav": {
+    "services": "Services",
+    "why": "How it works",
+    "contacts": "Contact",
+    "cta": "Get in touch"
+  },
+  "hero": {
+    "eyebrow": "Fomin — websites · bots · scripts",
+    "status": "Open for new projects",
+    "title": "A site, a bot, a script —\nfrom idea to launch.",
+    "subtitle": "I build websites, Telegram bots and Python scripts, start to finish. Fast, no fluff, with a clear price before work begins.",
+    "ctaPrimary": "Message on Telegram",
+    "ctaSecondary": "See pricing"
+  },
+  "marquee": [
+    "First 5 orders are free",
+    "50% upfront",
+    "Websites",
+    "Telegram bots",
+    "Python scripts",
+    "Card / USDT"
+  ],
+  "promo": {
+    "eyebrow": "Limited offer",
+    "title": "First 5 orders — free",
+    "text": "Building up a portfolio: the first 5 projects are free of charge. The only condition — the finished work can be shown as a portfolio case.",
+    "cta": "Claim a spot"
+  },
+  "services": {
+    "eyebrow": "Services & pricing",
+    "title": "Transparent pricing, no surprises",
+    "note": "Prices shown are for the base version. Any extra functionality is scoped separately and added on top.",
+    "expandLabel": "What can be added",
+    "collapseLabel": "Collapse",
+    "items": [
+      {
+        "name": "Telegram bot",
+        "price": "from $25",
+        "description": "Bot + a simple admin panel — base version. Payments, broadcasts or integrations are quoted separately.",
+        "extras": ["Payment acceptance", "Broadcasts & notifications", "CRM integration", "Multi-language support"]
+      },
+      {
+        "name": "Website",
+        "price": "from $75",
+        "description": "A landing page or business site, built to spec. Domain is not included — you purchase and connect it yourself.",
+        "extras": ["Responsive layout", "SEO setup", "Lead form / CRM", "Animations & interactivity"]
+      },
+      {
+        "name": "Python script",
+        "price": "$50–200",
+        "description": "Automation, scraping, integrations between services. Exact price only after discussing the task.",
+        "extras": ["Website scraping", "Report automation", "API integration", "Scheduled runs"]
+      },
+      {
+        "name": "Ongoing support",
+        "price": "from $20/mo",
+        "description": "Regular updates, fixes and maintenance for a bot, site or script already in production.",
+        "extras": ["Hourly fixes", "Monitoring & backups", "Dependency updates", "Priority response"]
+      }
+    ]
+  },
+  "why": {
+    "eyebrow": "How it works",
+    "title": "No case studies yet — so I work in the open",
+    "text": "Past projects are no longer live, so trust is built through process, not a portfolio: a clear price, fixed timelines and steady communication.",
+    "points": [
+      {
+        "title": "Price set upfront",
+        "text": "Cost and timeline are fixed before work starts — no surprises along the way."
+      },
+      {
+        "title": "Always reachable",
+        "text": "Viber, WhatsApp or Telegram — quick replies at every stage."
+      },
+      {
+        "title": "Stack fits the task",
+        "text": "Technology is chosen for the goal, not forced to fit a template."
+      },
+      {
+        "title": "Working result",
+        "text": "You get a finished product you can actually use, not an 'almost done' draft."
+      }
+    ]
+  },
+  "payment": {
+    "eyebrow": "Payment",
+    "title": "50% upfront",
+    "text": "Half the cost before work starts, the rest once the finished result is delivered.",
+    "methods": [
+      { "label": "Bank card" },
+      { "label": "USDT · TRC20" }
+    ]
+  },
+  "contacts": {
+    "eyebrow": "Contact",
+    "title": "Let's talk about your project",
+    "text": "Describe what you need — I'll work out the cost and suggest a solution.",
+    "viberLabel": "Viber",
+    "whatsappLabel": "WhatsApp",
+    "telegramLabel": "Telegram",
+    "telegramHandle": "@fomin-developer",
+    "copyHint": "Click to copy",
+    "copied": "Copied"
+  },
+  "footer": {
+    "tagline": "Websites · bots · scripts",
+    "rights": "© 2026 Fomin. All rights reserved."
+  }
+}
