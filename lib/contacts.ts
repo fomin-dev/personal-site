@@ -1,6 +1,6 @@
 const PHONE_INTL = "+380756431569";
 const PHONE_DIGITS = "380756431569";
-const TELEGRAM_HANDLE = "fomin-developer";
+const TELEGRAM_HANDLE = "fomin_developer";
 
 export const CONTACTS = {
   phoneDisplay: PHONE_INTL,
