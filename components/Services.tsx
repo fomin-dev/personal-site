@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import { Reveal } from "./Reveal";
 
 type ServiceItem = {
   name: string;
@@ -22,7 +23,7 @@ export function Services() {
       id="services"
       className="mx-auto max-w-6xl px-5 pb-16 sm:px-8 sm:pb-24"
     >
-      <div className="mb-10 max-w-2xl sm:mb-12">
+      <Reveal className="mb-10 max-w-2xl sm:mb-12">
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-red">
           {t("eyebrow")}
         </p>
@@ -32,9 +33,9 @@ export function Services() {
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           {t("note")}
         </p>
-      </div>
+      </Reveal>
 
-      <div className="grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-2">
+      <Reveal className="grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-2">
         {items.map((item, i) => {
           const isOpen = openIndex === i;
           return (
@@ -97,7 +98,7 @@ export function Services() {
             </div>
           );
         })}
-      </div>
+      </Reveal>
     </section>
   );
 }

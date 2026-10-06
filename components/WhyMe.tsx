@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { Reveal } from "./Reveal";
 
 type Point = {
   title: string;
@@ -24,7 +25,7 @@ export function WhyMe() {
         }}
       />
       <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
-        <div className="mb-10 grid gap-6 sm:mb-14 lg:grid-cols-[1fr_1fr] lg:items-end lg:gap-10">
+        <Reveal className="mb-10 grid gap-6 sm:mb-14 lg:grid-cols-[1fr_1fr] lg:items-end lg:gap-10">
           <div>
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-red">
               {t("eyebrow")}
@@ -36,13 +37,14 @@ export function WhyMe() {
           <p className="text-sm leading-relaxed text-paper/70 sm:text-base">
             {t("text")}
           </p>
-        </div>
+        </Reveal>
 
         <div className="grid gap-8 sm:grid-cols-2 sm:gap-x-10 sm:gap-y-10 lg:grid-cols-4">
           {points.map((point, i) => (
-            <div
+            <Reveal
               key={point.title}
-              className="flex flex-col gap-3 border-t border-paper/15 pt-5"
+              delay={i * 90}
+              className="group flex flex-col gap-3 border-t border-paper/15 pt-5 transition-colors hover:border-red"
             >
               <span className="font-display text-3xl font-semibold text-red">
                 {String(i + 1).padStart(2, "0")}
@@ -51,7 +53,7 @@ export function WhyMe() {
               <p className="text-sm leading-relaxed text-paper/70">
                 {point.text}
               </p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

@@ -1,13 +1,25 @@
 {
   "meta": {
     "title": "Fomin — websites, bots and scripts, built to spec",
-    "description": "Websites, Telegram bots and Python scripts. Fixed price, 50% upfront, first 5 orders are free."
+    "description": "Websites, Telegram bots and Python scripts. Fixed price, 50% upfront, first 5 orders are free.",
+    "keywords": [
+      "web development freelance",
+      "hire a web developer",
+      "custom telegram bot development",
+      "telegram bot developer",
+      "python automation script",
+      "web scraping service",
+      "landing page development",
+      "freelance developer"
+    ]
   },
   "nav": {
     "services": "Services",
     "why": "How it works",
     "contacts": "Contact",
-    "cta": "Get in touch"
+    "cta": "Get in touch",
+    "process": "Process",
+    "faq": "FAQ"
   },
   "hero": {
     "eyebrow": "Fomin — websites · bots · scripts",
@@ -15,7 +27,21 @@
     "title": "A site, a bot, a script —\nfrom idea to launch.",
     "subtitle": "I build websites, Telegram bots and Python scripts, start to finish. Fast, no fluff, with a clear price before work begins.",
     "ctaPrimary": "Message on Telegram",
-    "ctaSecondary": "See pricing"
+    "ctaSecondary": "See pricing",
+    "facts": [
+      {
+        "value": "2–7",
+        "label": "days per project"
+      },
+      {
+        "value": "50%",
+        "label": "upfront"
+      },
+      {
+        "value": "3",
+        "label": "languages"
+      }
+    ]
   },
   "marquee": [
     "First 5 orders are free",
@@ -42,25 +68,78 @@
         "name": "Telegram bot",
         "price": "from $25",
         "description": "Bot + a simple admin panel — base version. Payments, broadcasts or integrations are quoted separately.",
-        "extras": ["Payment acceptance", "Broadcasts & notifications", "CRM integration", "Multi-language support"]
+        "extras": [
+          "Payment acceptance",
+          "Broadcasts & notifications",
+          "CRM integration",
+          "Multi-language support"
+        ]
       },
       {
         "name": "Website",
         "price": "from $75",
         "description": "A landing page or business site, built to spec. Domain is not included — you purchase and connect it yourself.",
-        "extras": ["Responsive layout", "SEO setup", "Lead form / CRM", "Animations & interactivity"]
+        "extras": [
+          "Responsive layout",
+          "SEO setup",
+          "Lead form / CRM",
+          "Animations & interactivity"
+        ]
       },
       {
         "name": "Python script",
         "price": "$50–200",
         "description": "Automation, scraping, integrations between services. Exact price only after discussing the task.",
-        "extras": ["Website scraping", "Report automation", "API integration", "Scheduled runs"]
+        "extras": [
+          "Website scraping",
+          "Report automation",
+          "API integration",
+          "Scheduled runs"
+        ]
       },
       {
         "name": "Ongoing support",
         "price": "from $20/mo",
         "description": "Regular updates, fixes and maintenance for a bot, site or script already in production.",
-        "extras": ["Hourly fixes", "Monitoring & backups", "Dependency updates", "Priority response"]
+        "extras": [
+          "Hourly fixes",
+          "Monitoring & backups",
+          "Dependency updates",
+          "Priority response"
+        ]
+      }
+    ]
+  },
+  "siteCard": {
+    "eyebrow": "This site",
+    "title": "The site you're looking at is a work sample",
+    "text": "Three languages, responsive layout, animations, SEO and deployment — all built from scratch. This is roughly what the “Website from $75” project looks like.",
+    "cta": "I want one like this"
+  },
+  "process": {
+    "eyebrow": "Process",
+    "title": "Four steps from message to launch",
+    "text": "No bureaucracy: you describe the task, you get a price, a deadline and a working result.",
+    "steps": [
+      {
+        "title": "Request",
+        "text": "Message me on Telegram, Viber or WhatsApp and describe the task in your own words.",
+        "meta": "15 minutes"
+      },
+      {
+        "title": "Quote & deadline",
+        "text": "I ask a few questions, then fix the price and delivery date before any work starts.",
+        "meta": "same day"
+      },
+      {
+        "title": "Development",
+        "text": "I build and show progress along the way — changes are handled as we go.",
+        "meta": "2–7 days"
+      },
+      {
+        "title": "Launch",
+        "text": "You get the finished project, a short walkthrough, and I stay reachable.",
+        "meta": "+ support"
       }
     ]
   },
@@ -92,8 +171,43 @@
     "title": "50% upfront",
     "text": "Half the cost before work starts, the rest once the finished result is delivered.",
     "methods": [
-      { "label": "Bank card" },
-      { "label": "USDT · TRC20" }
+      {
+        "label": "Bank card"
+      },
+      {
+        "label": "USDT · TRC20"
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Questions",
+    "title": "Frequently asked",
+    "text": "If your question isn't here, just message me — I'll answer personally.",
+    "items": [
+      {
+        "q": "How much does a website or bot cost?",
+        "a": "A Telegram bot starts at $25 for the base version with a simple admin panel. A website starts at $75 (domain purchased separately). A Python script is $50–200 depending on the task. The exact price is set before work begins, after a short discussion."
+      },
+      {
+        "q": "How does payment work?",
+        "a": "50% upfront before work starts, the rest once the finished result is delivered. I accept bank card payments or USDT (TRC20 network)."
+      },
+      {
+        "q": "What does “first 5 orders are free” mean?",
+        "a": "I'm building up a portfolio, so the first 5 projects are free of charge. The only condition is that the finished work can be shown as a portfolio case. Spots are limited."
+      },
+      {
+        "q": "How long does a project take?",
+        "a": "A simple bot or landing page takes 2–4 days. A project with complex logic, payments and integrations can take a week or more. The exact deadline is part of the quote."
+      },
+      {
+        "q": "Are domain and hosting included in the website price?",
+        "a": "No, you buy the domain yourself so it's registered in your name. Hosting for simple sites is usually free (Vercel) — I set it up and connect your domain."
+      },
+      {
+        "q": "What if I need changes after delivery?",
+        "a": "Small fixes within the agreed scope are included. For ongoing maintenance there's a support plan from $20 per month."
+      }
     ]
   },
   "contacts": {
@@ -105,6 +219,10 @@
     "telegramLabel": "Telegram",
     "copyHint": "Click to copy",
     "copied": "Copied"
+  },
+  "mobileCta": {
+    "label": "Message on Telegram",
+    "hint": "Reply within an hour"
   },
   "footer": {
     "tagline": "Websites · bots · scripts",

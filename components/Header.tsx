@@ -6,16 +6,22 @@ import { Logo } from "./Logo";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { CONTACTS } from "@/lib/contacts";
 
-const SECTION_IDS = ["services", "why", "contacts"];
+const NAV_ITEMS = [
+  { id: "services", key: "services" },
+  { id: "process", key: "process" },
+  { id: "why", key: "why" },
+  { id: "faq", key: "faq" },
+  { id: "contacts", key: "contacts" },
+] as const;
 
 export function Header() {
   const t = useTranslations("nav");
   const [active, setActive] = useState<string | null>(null);
 
   useEffect(() => {
-    const sections = SECTION_IDS.map((id) => document.getElementById(id)).filter(
-      (el): el is HTMLElement => el !== null,
-    );
+    const sections = NAV_ITEMS.map(({ id }) =>
+      document.getElementById(id),
+    ).filter((el): el is HTMLElement => el !== null);
     if (sections.length === 0) return;
 
     const observer = new IntersectionObserver(
@@ -43,16 +49,12 @@ export function Header() {
           <Logo className="text-lg sm:text-xl" />
         </a>
 
-        <nav className="hidden items-center gap-6 text-sm font-medium text-muted md:flex">
-          <a href="#services" className={linkClass("services")}>
-            {t("services")}
-          </a>
-          <a href="#why" className={linkClass("why")}>
-            {t("why")}
-          </a>
-          <a href="#contacts" className={linkClass("contacts")}>
-            {t("contacts")}
-          </a>
+        <nav className="hidden items-center gap-6 text-sm font-medium text-muted lg:flex">
+          {NAV_ITEMS.map(({ id, key }) => (
+            <a key={id} href={`#${id}`} className={linkClass(id)}>
+              {t(key)}
+            </a>
+          ))}
         </nav>
 
         <div className="flex items-center gap-4 sm:gap-5">
@@ -67,8 +69,23 @@ export function Header() {
           </a>
         </div>
       </div>
-      <div className="flex justify-center gap-1 border-t border-line py-2 sm:hidden">
-        <LanguageSwitcher />
+
+      {/* Narrow screens: scrollable anchor rail, plus the switcher on phones */}
+      <div className="flex items-center gap-3 border-t border-line px-5 py-2 sm:px-8 lg:hidden">
+        <nav className="no-scrollbar -mx-1 flex flex-1 items-center gap-4 overflow-x-auto px-1 text-xs font-semibold uppercase tracking-wide text-muted">
+          {NAV_ITEMS.map(({ id, key }) => (
+            <a
+              key={id}
+              href={`#${id}`}
+              className={`whitespace-nowrap transition-colors ${
+                active === id ? "text-red" : ""
+              }`}
+            >
+              {t(key)}
+            </a>
+          ))}
+        </nav>
+        <LanguageSwitcher className="shrink-0 sm:hidden" />
       </div>
     </header>
   );

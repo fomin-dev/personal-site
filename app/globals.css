@@ -41,8 +41,23 @@
   border-color: var(--line);
 }
 
-html {
-  scroll-behavior: smooth;
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Sticky header (plus the mobile anchor rail) must not cover anchor targets */
+section[id],
+main [id] {
+  scroll-margin-top: 7.5rem;
+}
+
+@media (min-width: 1024px) {
+  section[id],
+  main [id] {
+    scroll-margin-top: 5rem;
+  }
 }
 
 body {
@@ -143,6 +158,160 @@ body {
     color-mix(in srgb, black 12%, transparent) 0 2px,
     transparent 2px 14px
   );
+}
+
+/* ---------- scroll reveal ---------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.7s cubic-bezier(0.22, 0.68, 0.24, 1),
+      transform 0.7s cubic-bezier(0.22, 0.68, 0.24, 1);
+    will-change: opacity, transform;
+  }
+
+  .reveal-in {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------- hero entrance ---------- */
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-line {
+    animation: rise-in 0.75s cubic-bezier(0.22, 0.68, 0.24, 1) both;
+  }
+
+  .hero-line:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+
+  .hero-line:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+
+  .hero-fade {
+    animation: rise-in 0.8s cubic-bezier(0.22, 0.68, 0.24, 1) 0.28s both;
+  }
+
+  .hero-fade-late {
+    animation-delay: 0.42s;
+  }
+}
+
+/* ---------- floating wordmarks ---------- */
+
+/* Only `transform` is animated here — Tailwind v4 keeps `rotate-*` on the
+   standalone `rotate` property, so the hero tilts survive the float. */
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .float-slow {
+    animation: float-slow 5s ease-in-out infinite;
+  }
+
+  .float-delay-1 {
+    animation-delay: 0.7s;
+  }
+
+  .float-delay-2 {
+    animation-delay: 1.4s;
+  }
+}
+
+/* ---------- button sheen ---------- */
+
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.btn-shine::after {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 -60%;
+  width: 45%;
+  background: linear-gradient(
+    100deg,
+    transparent,
+    color-mix(in srgb, white 32%, transparent),
+    transparent
+  );
+  transform: skewX(-18deg);
+  transition: left 0.6s ease;
+  z-index: -1;
+}
+
+.btn-shine:hover::after {
+  left: 120%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-shine::after {
+    display: none;
+  }
+}
+
+/* ---------- FAQ accordion (native <details>) ---------- */
+
+.faq-item summary::-webkit-details-marker,
+.faq-item summary::marker {
+  display: none;
+  content: "";
+}
+
+.faq-item[open] .faq-plus {
+  transform: rotate(45deg);
+  color: var(--red);
+  border-color: var(--red);
+}
+
+.faq-item summary:hover .faq-plus {
+  border-color: var(--red);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .faq-item[open] .faq-answer {
+    animation: rise-in 0.4s cubic-bezier(0.22, 0.68, 0.24, 1) both;
+  }
+}
+
+/* ---------- misc ---------- */
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px;
 }
 
 @keyframes pulse-dot {

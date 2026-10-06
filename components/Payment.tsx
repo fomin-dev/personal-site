@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { Reveal } from "./Reveal";
 
 type Method = { label: string };
 
@@ -8,7 +9,7 @@ export function Payment() {
 
   return (
     <section className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
-      <div className="flex flex-col gap-8 border border-line bg-card p-6 sm:flex-row sm:items-center sm:justify-between sm:p-10">
+      <Reveal className="flex flex-col gap-8 border border-line bg-card p-6 sm:flex-row sm:items-center sm:justify-between sm:p-10">
         <div className="max-w-xl">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-red">
             {t("eyebrow")}
@@ -30,7 +31,7 @@ export function Payment() {
             </span>
           ))}
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

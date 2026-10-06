@@ -1,12 +1,13 @@
 import { useTranslations } from "next-intl";
 import { CONTACTS } from "@/lib/contacts";
+import { Reveal } from "./Reveal";
 
 export function PromoBanner() {
   const t = useTranslations("promo");
 
   return (
     <section className="mx-5 mb-16 sm:mx-8 sm:mb-24">
-      <div className="stripe-bg relative mx-auto flex max-w-6xl flex-col items-start gap-6 overflow-hidden border border-red bg-red px-6 py-8 text-paper sm:flex-row sm:items-center sm:justify-between sm:px-10 sm:py-10">
+      <Reveal className="stripe-bg relative mx-auto flex max-w-6xl flex-col items-start gap-6 overflow-hidden border border-red bg-red px-6 py-8 text-paper sm:flex-row sm:items-center sm:justify-between sm:px-10 sm:py-10">
         <div
           aria-hidden="true"
           className="absolute -right-6 -top-6 flex h-24 w-24 rotate-12 items-center justify-center rounded-full border-2 border-dashed border-paper/70 text-center text-[11px] font-bold uppercase leading-tight text-paper/90 sm:right-6 sm:top-6 sm:h-28 sm:w-28"
@@ -37,7 +38,7 @@ export function PromoBanner() {
         >
           {t("cta")}
         </a>
-      </div>
+      </Reveal>
     </section>
   );
 }

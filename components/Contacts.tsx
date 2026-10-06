@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { CONTACTS } from "@/lib/contacts";
 import { ViberIcon, WhatsAppIcon, TelegramIcon, CopyIcon, CheckIcon } from "./icons";
+import { Reveal } from "./Reveal";
 
 export function Contacts() {
   const t = useTranslations("contacts");
@@ -51,7 +52,7 @@ export function Contacts() {
 
   return (
     <section id="contacts" className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
-      <div className="mb-10 max-w-2xl sm:mb-12">
+      <Reveal className="mb-10 max-w-2xl sm:mb-12">
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-red">
           {t("eyebrow")}
         </p>
@@ -61,9 +62,9 @@ export function Contacts() {
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           {t("text")}
         </p>
-      </div>
+      </Reveal>
 
-      <div className="grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-3">
+      <Reveal className="grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-3">
         {channels.map(({ key, label, sub, copyValue, href, Icon }) => {
           const isCopied = copiedKey === key;
           return (
@@ -101,7 +102,7 @@ export function Contacts() {
             </a>
           );
         })}
-      </div>
+      </Reveal>
     </section>
   );
 }
