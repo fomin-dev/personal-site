@@ -16,7 +16,7 @@ export function SiteCard() {
     <section className="mx-auto max-w-6xl px-5 pb-16 sm:px-8 sm:pb-24">
       <Reveal className="grid items-center gap-8 border border-line bg-card p-6 sm:p-10 lg:grid-cols-[1.05fr_minmax(0,1fr)] lg:gap-14">
         <div>
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-red">
+          <p className="eyebrow-rule mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-red">
             {t("eyebrow")}
           </p>
           <h2 className="font-display balance text-2xl font-semibold leading-tight sm:text-3xl">

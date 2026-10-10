@@ -5,13 +5,14 @@ type Fact = { value: string; label: string };
 
 export function Hero() {
   const t = useTranslations("hero");
+  const tPromo = useTranslations("promo");
   const lines = t("title").split("\n");
   const facts = t.raw("facts") as Fact[];
 
   return (
     <section
       id="top"
-      className="relative mx-auto grid max-w-6xl gap-10 overflow-hidden px-5 pb-16 pt-14 sm:px-8 sm:pb-24 sm:pt-20 lg:grid-cols-[1fr_auto] lg:items-end lg:gap-16"
+      className="relative mx-auto grid max-w-6xl gap-10 px-5 pb-16 pt-14 sm:px-8 sm:pb-24 sm:pt-20 lg:grid-cols-[1fr_auto] lg:items-end lg:gap-16"
     >
       <span
         aria-hidden="true"
@@ -20,9 +21,27 @@ export function Hero() {
         ()
       </span>
 
+      {/* Promo seal — rotates slowly, jumps to the pricing block */}
+      <a
+        href="#services"
+        aria-label={tPromo("title")}
+        className="group absolute right-6 top-6 z-10 hidden h-28 w-28 items-center justify-center lg:flex"
+      >
+        <span
+          aria-hidden="true"
+          className="spin-slow absolute inset-0 rounded-full border-2 border-dashed border-red/60 transition-colors group-hover:border-red"
+        />
+        <span className="font-display text-center text-xl font-semibold leading-none text-red">
+          ×5
+          <span className="mt-1 block font-mono text-[10px] font-bold uppercase tracking-[0.18em]">
+            free
+          </span>
+        </span>
+      </a>
+
       <div className="relative">
         <div className="mb-5 flex flex-wrap items-center gap-x-4 gap-y-2 sm:mb-6">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-red">
+          <p className="eyebrow-rule text-xs font-semibold uppercase tracking-[0.18em] text-red">
             {t("eyebrow")}
           </p>
           <span className="inline-flex items-center gap-2 border border-line bg-card px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-muted">
@@ -32,7 +51,10 @@ export function Hero() {
         </div>
         <h1 className="font-display balance text-[2.6rem] font-semibold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
           {lines.map((line, i) => (
-            <span key={i} className="hero-line block">
+            <span
+              key={i}
+              className={`hero-line block ${i === lines.length - 1 ? "text-red" : ""}`}
+            >
               {line}
             </span>
           ))}
@@ -46,9 +68,12 @@ export function Hero() {
             href={CONTACTS.telegramUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-shine inline-flex items-center justify-center bg-red px-5 py-3.5 text-sm font-semibold text-paper transition-transform hover:-translate-y-0.5 hover:bg-red-dim sm:px-6 sm:text-base"
+            className="btn-shine btn-arrow inline-flex items-center justify-center gap-2 bg-red px-5 py-3.5 text-sm font-semibold text-paper transition-transform hover:-translate-y-0.5 hover:bg-red-dim sm:px-6 sm:text-base"
           >
             {t("ctaPrimary")}
+            <span className="arrow" aria-hidden="true">
+              →
+            </span>
           </a>
           <a
             href="#services"
@@ -58,11 +83,12 @@ export function Hero() {
           </a>
         </div>
 
-        <dl className="hero-fade hero-fade-late mt-10 flex flex-wrap gap-x-8 gap-y-5 border-t border-line pt-6 sm:mt-12 sm:gap-x-12">
+        <dl className="hero-fade hero-fade-late mt-10 flex flex-wrap gap-x-8 gap-y-5 sm:mt-12 sm:gap-x-12">
           {facts.map((fact) => (
-            <div key={fact.label} className="flex flex-col gap-0.5">
+            <div key={fact.label} className="flex flex-col gap-1">
+              <span aria-hidden="true" className="h-0.5 w-7 bg-red" />
               <dt className="sr-only">{fact.label}</dt>
-              <dd className="font-display text-3xl font-semibold leading-none sm:text-4xl">
+              <dd className="font-display mt-1 text-3xl font-semibold leading-none sm:text-4xl">
                 {fact.value}
               </dd>
               <span

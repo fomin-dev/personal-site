@@ -14,7 +14,7 @@ export function Process() {
   return (
     <section id="process" className="mx-auto max-w-6xl px-5 pb-16 sm:px-8 sm:pb-24">
       <Reveal className="mb-10 max-w-2xl sm:mb-14">
-        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-red">
+        <p className="eyebrow-rule mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-red">
           {t("eyebrow")}
         </p>
         <h2 className="font-display balance text-3xl font-semibold leading-tight sm:text-4xl">
@@ -26,9 +26,9 @@ export function Process() {
       </Reveal>
 
       <ol className="relative grid gap-8 sm:grid-cols-2 sm:gap-x-10 sm:gap-y-12 lg:grid-cols-4 lg:gap-x-6">
-        <span
-          aria-hidden="true"
-          className="absolute left-0 right-0 top-[18px] hidden h-px bg-line lg:block"
+        <Reveal
+          as="span"
+          className="rule-draw pointer-events-none absolute left-0 right-0 top-[18px] hidden h-px bg-line lg:block"
         />
         {steps.map((step, i) => (
           <Reveal

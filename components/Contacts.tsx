@@ -53,7 +53,7 @@ export function Contacts() {
   return (
     <section id="contacts" className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
       <Reveal className="mb-10 max-w-2xl sm:mb-12">
-        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-red">
+        <p className="eyebrow-rule mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-red">
           {t("eyebrow")}
         </p>
         <h2 className="font-display balance text-3xl font-semibold leading-tight sm:text-4xl">

@@ -24,7 +24,7 @@ export function Services() {
       className="mx-auto max-w-6xl px-5 pb-16 sm:px-8 sm:pb-24"
     >
       <Reveal className="mb-10 max-w-2xl sm:mb-12">
-        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-red">
+        <p className="eyebrow-rule mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-red">
           {t("eyebrow")}
         </p>
         <h2 className="font-display balance text-3xl font-semibold leading-tight sm:text-4xl">
@@ -41,7 +41,7 @@ export function Services() {
           return (
             <div
               key={item.name}
-              className="group relative flex flex-col gap-4 overflow-hidden bg-card p-6 transition-colors hover:bg-paper-2 sm:p-8"
+              className="card-accent tilt group relative flex flex-col gap-4 overflow-hidden bg-card p-6 transition-colors hover:bg-paper-2 sm:p-8"
             >
               <span
                 aria-hidden="true"

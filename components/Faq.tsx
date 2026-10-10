@@ -13,7 +13,7 @@ export function Faq() {
     <section id="faq" className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
       <div className="grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16">
         <Reveal className="lg:sticky lg:top-32 lg:self-start">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-red">
+          <p className="eyebrow-rule mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-red">
             {t("eyebrow")}
           </p>
           <h2 className="font-display balance text-3xl font-semibold leading-tight sm:text-4xl">

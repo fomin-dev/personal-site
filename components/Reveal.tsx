@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 
 type RevealProps = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
   /** Stagger in ms, applied as a transition delay. */
   delay?: number;

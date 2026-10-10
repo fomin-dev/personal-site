@@ -4,7 +4,6 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import { CustomCursor } from "@/components/CustomCursor";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { StructuredData } from "@/components/StructuredData";
 import { OG_LOCALES, SITE_URL, languageAlternates } from "@/lib/site";
@@ -119,7 +118,6 @@ export default async function LocaleLayout({
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider>
           <ScrollProgress />
-          <CustomCursor />
           {children}
         </NextIntlClientProvider>
         <StructuredData locale={locale} />
