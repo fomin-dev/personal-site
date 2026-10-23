@@ -44,7 +44,7 @@ export function BeautyShowcase() {
               beauty-studio-fomin.vercel.app
               <span className="ml-auto">↗</span>
             </span>
-            <span className="absolute bottom-4 left-4 border border-[#f2d9c2]/50 bg-[#211512]/85 px-3 py-2 font-mono text-[9px] font-semibold uppercase tracking-[0.16em] text-[#fbf1e5] sm:bottom-6 sm:left-6 sm:text-[10px]">
+            <span className="absolute bottom-4 left-4 max-w-[38%] border border-[#f2d9c2]/50 bg-[#211512]/85 px-3 py-2 font-mono text-[9px] font-semibold uppercase leading-tight tracking-[0.16em] text-[#fbf1e5] sm:bottom-6 sm:left-6 sm:max-w-none sm:text-[10px]">
               {t("imageCaption")}
             </span>
             <a
