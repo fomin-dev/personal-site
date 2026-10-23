@@ -32,7 +32,7 @@ export function Hero() {
           className="spin-slow absolute inset-0 rounded-full border-2 border-dashed border-red/60 transition-colors group-hover:border-red"
         />
         <span className="font-display text-center text-xl font-semibold leading-none text-red">
-          ×5
+          ×4
           <span className="mt-1 block font-mono text-[10px] font-bold uppercase tracking-[0.18em]">
             free
           </span>

@@ -13,7 +13,7 @@ export function PromoBanner() {
           className="absolute -right-6 -top-6 flex h-24 w-24 rotate-12 items-center justify-center rounded-full border-2 border-dashed border-paper/70 text-center text-[11px] font-bold uppercase leading-tight text-paper/90 sm:right-6 sm:top-6 sm:h-28 sm:w-28"
         >
           <span>
-            x5
+            x4
             <br />
             free
           </span>

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Fomin — websites, bots and scripts, built to spec",
-    "description": "Websites, Telegram bots and Python scripts. Fixed price, 50% upfront, first 5 orders are free.",
+    "description": "Websites, Telegram bots and Python scripts. Fixed price, 50% upfront, first 4 orders are free.",
     "keywords": [
       "web development freelance",
       "hire a web developer",
@@ -44,7 +44,7 @@
     ]
   },
   "marquee": [
-    "First 5 orders are free",
+    "First 4 orders are free",
     "50% upfront",
     "Websites",
     "Telegram bots",
@@ -53,8 +53,8 @@
   ],
   "promo": {
     "eyebrow": "Limited offer",
-    "title": "First 5 orders — free",
-    "text": "Building up a portfolio: the first 5 projects are free of charge. The only condition — the finished work can be shown as a portfolio case.",
+    "title": "First 4 orders — free",
+    "text": "Building up a portfolio: the first 4 projects are free of charge. The only condition — the finished work can be shown as a portfolio case.",
     "cta": "Claim a spot"
   },
   "services": {
@@ -145,8 +145,8 @@
   },
   "why": {
     "eyebrow": "How it works",
-    "title": "No case studies yet — so I work in the open",
-    "text": "Past projects are no longer live, so trust is built through process, not a portfolio: a clear price, fixed timelines and steady communication.",
+    "title": "A growing portfolio, built in the open",
+    "text": "I show both finished websites and projects and the process behind them: the price and timeline are agreed upfront, with clear communication at every stage.",
     "points": [
       {
         "title": "Price set upfront",
@@ -193,8 +193,8 @@
         "a": "50% upfront before work starts, the rest once the finished result is delivered. I accept bank card payments or USDT (TRC20 network)."
       },
       {
-        "q": "What does “first 5 orders are free” mean?",
-        "a": "I'm building up a portfolio, so the first 5 projects are free of charge. The only condition is that the finished work can be shown as a portfolio case. Spots are limited."
+        "q": "What does “first 4 orders are free” mean?",
+        "a": "I'm building up a portfolio, so the first 4 projects are free of charge. The only condition is that the finished work can be shown as a portfolio case. Spots are limited."
       },
       {
         "q": "How long does a project take?",
@@ -227,5 +227,44 @@
   "footer": {
     "tagline": "Websites · bots · scripts",
     "rights": "© 2026 Fomin. All rights reserved."
+  },
+  "projects": {
+    "eyebrow": "Finished project",
+    "title": "A case study you can explore right now",
+    "intro": "Real projects, direct links and screenshots — so you can explore the finished result for yourself.",
+    "browserLabel": "developer portfolio",
+    "label": "Portfolio · indie development",
+    "projectTitle": "Evnank — a 2D game developer portfolio",
+    "projectText": "A portfolio for an indie developer building games from scratch with C++ and SFML. It presents a finished platformer with a built-in level editor and a larger remake in development. The site pairs a distinctive pixel-art look with dedicated game pages and direct GitHub and download links.",
+    "tags": [
+      "C++",
+      "SFML",
+      "2D platformer",
+      "Level editor"
+    ],
+    "detailsLabel": "Project technologies and features",
+    "cta": "Visit the project site",
+    "screenshots": {
+      "home": "Evnank homepage",
+      "game": "2D Platformer project page"
+    }
+  },
+  "beautyShowcase": {
+    "eyebrow": "Concept website · Beauty",
+    "title": "A themed website for a beauty studio",
+    "description": "A concept salon website in Odesa, with service pricing, stylist profiles, a work gallery and an online-booking flow. Its warm visual identity brings a coastal feel together with a clear path to booking.",
+    "featuresLabel": "Concept website features",
+    "features": [
+      "RU / UA / EN",
+      "5 service categories",
+      "Online booking",
+      "Work gallery"
+    ],
+    "demoNote": "This is a concept project. The salon, prices, address and team are fictional and shown for design and feature demonstration only.",
+    "imageAlt": "Fomin Beauty Studio homepage",
+    "imageCaption": "Homepage · Fomin Beauty Studio",
+    "cta": "View the demo website",
+    "galleryAlt": "Fomin Beauty Studio work gallery",
+    "galleryCaption": "Work gallery · Fomin Beauty Studio"
   }
 }

@@ -4,6 +4,8 @@ import { Marquee } from "@/components/Marquee";
 import { Hero } from "@/components/Hero";
 import { PromoBanner } from "@/components/PromoBanner";
 import { Services } from "@/components/Services";
+import { Projects } from "@/components/Projects";
+import { BeautyShowcase } from "@/components/BeautyShowcase";
 import { SiteCard } from "@/components/SiteCard";
 import { Process } from "@/components/Process";
 import { WhyMe } from "@/components/WhyMe";
@@ -34,6 +36,8 @@ export default async function Home({
         <Hero />
         <PromoBanner />
         <Services />
+        <Projects />
+        <BeautyShowcase />
         <SiteCard />
         <Process />
         <WhyMe />
