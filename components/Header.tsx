@@ -43,7 +43,7 @@ export function Header() {
     `link-underline transition-colors ${active === id ? "text-red" : "hover:text-ink"}`;
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-paper/90 backdrop-blur supports-[backdrop-filter]:bg-paper/75">
+    <header className="site-header sticky top-0 z-40 border-b border-line bg-paper/90 backdrop-blur supports-[backdrop-filter]:bg-paper/75">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4 sm:px-8">
         <a href="#top" className="shrink-0">
           <Logo className="text-lg sm:text-xl" />
@@ -77,8 +77,11 @@ export function Header() {
             <a
               key={id}
               href={`#${id}`}
-              className={`whitespace-nowrap transition-colors ${
-                active === id ? "text-red" : ""
+              aria-current={active === id ? "location" : undefined}
+              className={`relative inline-flex whitespace-nowrap py-1 transition-colors ${
+                active === id
+                  ? "text-red after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-red"
+                  : ""
               }`}
             >
               {t(key)}

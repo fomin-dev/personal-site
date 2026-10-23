@@ -63,15 +63,39 @@ main [id] {
 body {
   overflow-x: clip;
   background: var(--paper);
-  background-image: radial-gradient(
-    circle at 1px 1px,
-    color-mix(in srgb, var(--ink) 6%, transparent) 1px,
-    transparent 0
-  );
-  background-size: 22px 22px;
+  background-image:
+    radial-gradient(
+      ellipse 42rem 28rem at 82% 0%,
+      color-mix(in srgb, var(--red) 5%, transparent),
+      transparent 74%
+    ),
+    radial-gradient(
+      circle at 1px 1px,
+      color-mix(in srgb, var(--ink) 4%, transparent) 1px,
+      transparent 0
+    );
+  background-size: auto, 26px 26px;
   color: var(--ink);
   font-family: var(--font-jetbrains-mono), ui-monospace, monospace;
   -webkit-font-smoothing: antialiased;
+}
+
+.site-header {
+  box-shadow: 0 5px 22px -18px color-mix(in srgb, var(--ink) 45%, transparent);
+}
+
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--red),
+    color-mix(in srgb, var(--red) 32%, transparent) 38%,
+    transparent 72%
+  );
+  pointer-events: none;
 }
 
 .font-display {

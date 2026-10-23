@@ -75,41 +75,23 @@ export function Projects() {
             </a>
           </div>
 
-          <div className="grid grid-cols-2 gap-3 border-t border-line bg-paper-2 p-3 sm:gap-4 sm:p-5 lg:border-l lg:border-t-0 lg:p-6">
+          <div className="border-t border-line bg-paper-2 p-3 sm:p-5 lg:border-l lg:border-t-0 lg:p-6">
             <a
               href={PROJECT_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative block aspect-[4/3] overflow-hidden border border-line bg-paper shadow-sm"
+              className="group relative block aspect-[7/6] overflow-hidden border border-line bg-[#102034] shadow-sm"
               aria-label={`${t("screenshots.home")} — ${t("cta")}`}
             >
               <Image
                 src="/portfolio/evnank-home.webp"
                 alt={t("screenshots.home")}
                 fill
-                sizes="(max-width: 1024px) 50vw, 28vw"
-                className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.04]"
+                sizes="(max-width: 1024px) 100vw, 44vw"
+                className="object-contain transition-transform duration-500 group-hover:scale-[1.015]"
               />
-              <span className="absolute inset-x-0 bottom-0 bg-ink/80 px-2 py-2 font-mono text-[9px] font-semibold uppercase tracking-wide text-paper sm:px-3 sm:text-[10px]">
+              <span className="absolute inset-x-0 bottom-0 bg-ink/80 px-3 py-2.5 font-mono text-[10px] font-semibold uppercase tracking-wide text-paper sm:px-4 sm:text-xs">
                 {t("screenshots.home")}
-              </span>
-            </a>
-            <a
-              href={PROJECT_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative block aspect-[4/3] overflow-hidden border border-line bg-paper shadow-sm"
-              aria-label={`${t("screenshots.game")} — ${t("cta")}`}
-            >
-              <Image
-                src="/portfolio/evnank-platformer.webp"
-                alt={t("screenshots.game")}
-                fill
-                sizes="(max-width: 1024px) 50vw, 28vw"
-                className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.04]"
-              />
-              <span className="absolute inset-x-0 bottom-0 bg-ink/80 px-2 py-2 font-mono text-[9px] font-semibold uppercase tracking-wide text-paper sm:px-3 sm:text-[10px]">
-                {t("screenshots.game")}
               </span>
             </a>
           </div>
